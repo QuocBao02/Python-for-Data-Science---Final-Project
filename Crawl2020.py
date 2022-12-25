@@ -36,15 +36,15 @@ def Add_value_into_DataFrame(root_url, start_id, end_id):
     
     for i in range(int(start_id), int(end_id) + 1):
         dict = {"ID": None,
-            "Toán": -1,
-            "Lí": -1,
-            "Hóa": -1,
-            "Sinh": -1,
-            "Ngoại ngữ": -1,
-            "Văn": -1,
-            "GDCD": -1,
-            "Địa": -1,
-            "Sử": -1
+            "Toán": None,
+            "Lí": None,
+            "Hóa": None,
+            "Sinh": None,
+            "Ngoại ngữ": None,
+            "Văn": None,
+            "GDCD": None,
+            "Địa": None,
+            "Sử": None
         }
         subject = ["Toán","Văn", "Ngoại ngữ", "Lí", "Hóa", "Sinh","Sử", "Địa", "GDCD"]
         id = province_id + str(i)
@@ -53,14 +53,10 @@ def Add_value_into_DataFrame(root_url, start_id, end_id):
         print(url)
         s = Parse_web(url)
         if (s != None and s != []):
+            s.pop(6)
             for j in range(len(subject)):
-                dict[subject[j]] = s[j]
-            if ( s != None):
-                size = len(s)
-                for j in range(size):
-                    if (j % 2 == 0):
-                        dict[s[j]] = float(s[j + 1])  
-                DataFrame.loc[len(DataFrame.index)] = dict
+                dict[subject[j]] = s[j] 
+            DataFrame.loc[len(DataFrame.index)] = dict
     DataFrame.columns=["ID", "Toán", "Lí", "Hóa", "Sinh","Văn","Ngoại ngữ", "GDCD", "Địa","Sử"]
     DataFrame.index += 1
     return DataFrame
@@ -72,5 +68,5 @@ DataFrame2020 = Add_value_into_DataFrame(url, "02000001", "02020000")
 # print(DataFrame)
 
 
-DataFrame2020.to_csv("2020.csv")
+DataFrame2020.to_csv("2020_1_20k.csv")
 

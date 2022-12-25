@@ -22,15 +22,15 @@ def CreateDataFrame(root_url, start_id, end_id):
     
     for i in range(int(start_id), int(end_id) + 1):
         dict ={"ID": None,
-            "Toán": -1,
-            "Lí": -1,
-            "Hóa": -1,
-            "Sinh": -1,
-            "Ngoại ngữ": -1,
-            "Văn": -1,
-            "GDCD": -1,
-            "Địa": -1,
-            "Sử": -1
+            "Toán": None,
+            "Lí": None,
+            "Hóa": None,
+            "Sinh": None,
+            "Ngoại ngữ": None,
+            "Văn": None,
+            "GDCD": None,
+            "Địa": None,
+            "Sử": None
         }
         id = province_id + str(i)
         dict["ID"] = id
