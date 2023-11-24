@@ -8,4 +8,25 @@
 <img src = "https://drive.google.com/uc?id=1YenRoD8MUDs1HW3lmLkc8FvyLeFCxYfj">
 
 # Scraping data from vietnamnet.vn
-[link](https://vietnamnet.vn/giao-duc/diem-thi/tra-cuu-diem-thi-tot-nghiep-thpt/2022/)
+[link](https://vietnamnet.vn/giao-duc/diem-thi/tra-cuu-diem-thi-tot-nghiep-thpt/2022/) by BeautyfullSoup library
+![image](./image/beautifulsoup1.png)
+![image](./image/beautifulsoup2.png)
+
+# ETL html and save it as csv file.
+![image](./image/dataoverview.png)
+
+# Data Visualization by using Matplotlib.
+![image](./image/chart1.png)
+![image](./image/chart2.png)
+![image](./image/chart3.png)
+![image](./image/chart4.png)
+![image](./image/chart5.png)
+![image](./image/chart6.png)
+
+
+# Predict score board 2022 from 2020 and 2021 with using Polynomial Regression of sklean library 
+![image](./image/chart7.png)
+* Predict the shape of data in 2022
+![image](./image/predict.png)
+* The real shape of data in 2022
+![image](./image/real.png)
